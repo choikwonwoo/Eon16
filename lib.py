@@ -1,5 +1,4 @@
 import os
-import copy
 import books 
 
 TF = os.path.dirname(os.path.abspath(__file__))
