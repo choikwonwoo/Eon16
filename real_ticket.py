@@ -22,10 +22,8 @@ class Train_ticket:
                 for i in range(1,len(self.List_Train), 1):
                     if self.sub_List[i][-1] ==0:
                         self.sub_List[i][-1] = '매진'
-                    
-                    else:
-                        
-                        print(self.sub_List[i])
+                                          
+                    print(self.sub_List[i])
             elif sel == 3:
 
                 
