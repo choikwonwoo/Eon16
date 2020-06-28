@@ -20,7 +20,12 @@ class Train_ticket:
             elif sel==2:
                 print("리스트 출력")
                 for i in range(1,len(self.List_Train), 1):
-                    print(self.sub_List[i])
+                    if self.sub_List[i][-1] ==0:
+                        self.sub_List[i][-1] = '매진'
+                    
+                    else:
+                        
+                        print(self.sub_List[i])
             elif sel == 3:
 
                 
@@ -107,9 +112,14 @@ class Train_ticket:
         while True:
             DW = int(input("취소 하시겠습니까? Y=1/N=2 : "))
             if DW == 1:
+                for i in range(1,len(self.List_Train), 1):
+                    if self.sub_List[i][-1] =='매진':
+                        self.sub_List[i][-1] = 0
+                
                 self.sub_List[self.time_adress][-1]=int(self.sub_List[self.time_adress][-1])+1
                 print("취소 되었습니다.")
                 self.a = self.a - 1
+                
                 break
             if DW == 2:
                 print("메인화면으로 돌아갑니다")
